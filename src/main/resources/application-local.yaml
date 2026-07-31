@@ -1,0 +1,4 @@
+wh:
+  db:
+    host: localhost
+    pw: 123456
