@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8000
 spring:
   application:
-    name: hm-service
+    name: warehouse
   profiles:
     active: dev
   datasource:
@@ -17,32 +17,20 @@ mybatis-plus:
     db-config:
       update-strategy: not_null
       id-type: auto
+
 logging:
   level:
-    com.hmall: debug
+    com.zh: debug
   pattern:
     dateformat: HH:mm:ss:SSS
   file:
     path: "logs/${spring.application.name}"
-knife4j:
-  enable: true
-  openapi:
-    title: ????
-    description: "????"
-    email: Zhlyu713@163.com
-    concat: zhlyu
-    version: v1.0.0
-    group:
-      default:
-        group-name: default
-        api-rule: package
-        api-rule-resources:
-          - com.warehouse.controller
-hm:
+
+wh:
   jwt:
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
+    location: classpath:wh.jks
+    alias: wh
+    password: 123456
     tokenTTL: 30m
   auth:
     excludePaths:
@@ -50,4 +38,3 @@ hm:
       - /users/login
       - /items/**
       - /hi
-# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
