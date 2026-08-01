@@ -1,0 +1,49 @@
+19:16:24:345  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 55964 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+19:16:24:353  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+19:16:25:649  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+19:16:25:653  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:16:25:703  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+19:16:26:817  INFO 55964 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+19:16:26:850  INFO 55964 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+19:16:26:852  INFO 55964 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+19:16:26:958  INFO 55964 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2496 ms
+19:16:28:677  INFO 55964 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@ec0c838
+19:16:28:813  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+19:16:29:808  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3221588e
+19:16:29:813  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+19:16:30:675  INFO 55964 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+19:16:30:698  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 7.336 seconds (process running for 8.548)
+19:16:40:440  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:16:40:442  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+19:16:40:447  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+19:17:13:379  INFO 55964 --- [warehouse] [http-nio-8000-exec-3] com.zh.service.impl.UserServiceImpl      : 用户登录成功：eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYxODc4MzN9.cUq2i4SfMH3bh1MWfvzaWZCHckM6DptI1Wdf-UnmN_vU5b21nlDPTCT--Ip0m7h1inNWLOUN1-dH04a-k3zdCXZQx30daJvTAp_Tjh8w4y9MODeFHS2zQc02bfnbY11Qc16__YgRQEBXE7WhJyle9Ys9gWfGy0d7okAQCpxw10dmCRViXuCsw7aI9ohZyDceEAel-FMT5ul1AkXV1OybeLZiF8xAAVSczLXgdXcVlbp5sfNHcmJVmU-Mvn7xunu-_glrY0bcU_0Xx1lS3JN6HuGsCUh3NwW1SuyATCJ2zj7JinXiegucgeMuREmz8wNWAVtxYn4a1YUh6YoefD2BJA
+19:19:56:551  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+19:19:56:691  INFO 55964 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+19:19:56:711  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+19:19:56:750  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+19:20:04:068  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 62988 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+19:20:04:073 DEBUG 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+19:20:04:075  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+19:20:05:259  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+19:20:05:262  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:20:05:306  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+19:20:06:352  INFO 62988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+19:20:06:383  INFO 62988 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+19:20:06:384  INFO 62988 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+19:20:06:476  INFO 62988 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2301 ms
+19:20:08:351  INFO 62988 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@290b1b2e
+19:20:08:516  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+19:20:09:142  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f3ddc86
+19:20:09:145  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+19:20:09:499  INFO 62988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+19:20:09:513  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 6.428 seconds (process running for 7.896)
+19:20:33:796  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:20:33:799  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+19:20:33:805  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+19:20:36:494 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+19:20:36:636 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+19:20:36:851 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+19:20:42:506 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+19:20:42:507 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+19:20:42:516 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+19:20:42:772  INFO 62988 --- [warehouse] [http-nio-8000-exec-4] com.zh.service.impl.UserServiceImpl      : 用户登录成功：eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYxODgwNDJ9.jv2941UhpqENcyiqmhh3cp0mKO4J8xaMr9E2WyEwwD57CxnwdzwZmWJRhwQVmMSYH5uPijx_iFhSmW6_GANxUggkEoNAb25B7TEp1bGyewYC_8cWGd57sdK5LDPBtJS4oU5dmsfTUITcAhZ2mmF5muwjQWBABxzEXoBJcGaemeD8ApVC7xSljTz7Qzjj6qpXecASKsOlVXNMpOTyGp2XlJggGs9zuFm3YsYgwCj3pT0Etn98kZRfFCNqoMXCKjImN9hVJZPQi2SqL4b-XoOAFThKtKnGW0jiemZnJEtFN92EV0VAcHEgVauyjKfMaV7i0-e91MlozCB8DXmdzQCcLA
