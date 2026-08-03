@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
 import com.zh.domain.dto.UserDTO;
 import com.zh.domain.dto.Result;
 import com.zh.domain.po.User;
+import com.zh.domain.vo.UserLoginVO;
 import com.zh.mapper.UserMapper;
 import com.zh.service.IUserService;
 import com.zh.utils.JwtTool;
@@ -51,7 +52,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
         // 5.登录成功：下发JWT
         String token = jwtTool.createToken(dbUser.getId(), Duration.ofDays(7));
-        log.info("用户登录成功：{}", token);
-        return Result.ok("登录成功", token);
+        //封装VO
+        UserLoginVO vo = new UserLoginVO();
+        vo.setToken(token);
+        vo.setDisplayName(dbUser.getDisplayName());
+        vo.setRole(dbUser.getRole());
+
+        log.info("用户登录成功：{}", vo);
+        return Result.ok("登录成功", vo);
     }
 }

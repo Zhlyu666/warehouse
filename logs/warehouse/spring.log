@@ -1,49 +1,643 @@
-19:16:24:345  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 55964 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
-19:16:24:353  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
-19:16:25:649  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-19:16:25:653  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:16:25:703  INFO 55964 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
-19:16:26:817  INFO 55964 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
-19:16:26:850  INFO 55964 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-19:16:26:852  INFO 55964 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-19:16:26:958  INFO 55964 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2496 ms
-19:16:28:677  INFO 55964 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@ec0c838
-19:16:28:813  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-19:16:29:808  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3221588e
-19:16:29:813  INFO 55964 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-19:16:30:675  INFO 55964 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
-19:16:30:698  INFO 55964 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 7.336 seconds (process running for 8.548)
-19:16:40:440  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:16:40:442  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-19:16:40:447  INFO 55964 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-19:17:13:379  INFO 55964 --- [warehouse] [http-nio-8000-exec-3] com.zh.service.impl.UserServiceImpl      : 用户登录成功：eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYxODc4MzN9.cUq2i4SfMH3bh1MWfvzaWZCHckM6DptI1Wdf-UnmN_vU5b21nlDPTCT--Ip0m7h1inNWLOUN1-dH04a-k3zdCXZQx30daJvTAp_Tjh8w4y9MODeFHS2zQc02bfnbY11Qc16__YgRQEBXE7WhJyle9Ys9gWfGy0d7okAQCpxw10dmCRViXuCsw7aI9ohZyDceEAel-FMT5ul1AkXV1OybeLZiF8xAAVSczLXgdXcVlbp5sfNHcmJVmU-Mvn7xunu-_glrY0bcU_0Xx1lS3JN6HuGsCUh3NwW1SuyATCJ2zj7JinXiegucgeMuREmz8wNWAVtxYn4a1YUh6YoefD2BJA
-19:19:56:551  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-19:19:56:691  INFO 55964 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-19:19:56:711  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-19:19:56:750  INFO 55964 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-19:20:04:068  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 62988 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
-19:20:04:073 DEBUG 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
-19:20:04:075  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
-19:20:05:259  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-19:20:05:262  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:20:05:306  INFO 62988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
-19:20:06:352  INFO 62988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
-19:20:06:383  INFO 62988 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-19:20:06:384  INFO 62988 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
-19:20:06:476  INFO 62988 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2301 ms
-19:20:08:351  INFO 62988 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@290b1b2e
-19:20:08:516  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-19:20:09:142  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f3ddc86
-19:20:09:145  INFO 62988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-19:20:09:499  INFO 62988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
-19:20:09:513  INFO 62988 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 6.428 seconds (process running for 7.896)
-19:20:33:796  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:20:33:799  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-19:20:33:805  INFO 62988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-19:20:36:494 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
-19:20:36:636 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
-19:20:36:851 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
-19:20:42:506 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
-19:20:42:507 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
-19:20:42:516 DEBUG 62988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
-19:20:42:772  INFO 62988 --- [warehouse] [http-nio-8000-exec-4] com.zh.service.impl.UserServiceImpl      : 用户登录成功：eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYxODgwNDJ9.jv2941UhpqENcyiqmhh3cp0mKO4J8xaMr9E2WyEwwD57CxnwdzwZmWJRhwQVmMSYH5uPijx_iFhSmW6_GANxUggkEoNAb25B7TEp1bGyewYC_8cWGd57sdK5LDPBtJS4oU5dmsfTUITcAhZ2mmF5muwjQWBABxzEXoBJcGaemeD8ApVC7xSljTz7Qzjj6qpXecASKsOlVXNMpOTyGp2XlJggGs9zuFm3YsYgwCj3pT0Etn98kZRfFCNqoMXCKjImN9hVJZPQi2SqL4b-XoOAFThKtKnGW0jiemZnJEtFN92EV0VAcHEgVauyjKfMaV7i0-e91MlozCB8DXmdzQCcLA
+14:48:33:689  WARN 71352 --- [warehouse] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20h47m31s302ms918µs200ns).
+14:53:15:874 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:53:15:982 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:53:16:292 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:53:16:316 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:53:16:324 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:53:16:358 DEBUG 71352 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+14:54:37:397  INFO 71352 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+14:54:37:727  INFO 71352 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+14:54:37:829  INFO 71352 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+14:54:37:890  INFO 71352 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+14:55:08:956  INFO 61820 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 61820 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+14:55:08:968 DEBUG 61820 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+14:55:08:971  INFO 61820 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+14:55:12:131  INFO 61820 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+14:55:12:136  INFO 61820 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+14:55:12:219  INFO 61820 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 0 JDBC repository interfaces.
+14:55:14:207  INFO 61820 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+14:55:14:266  INFO 61820 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:55:14:268  INFO 61820 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+14:55:14:519  INFO 61820 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5370 ms
+14:55:18:060  INFO 61820 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fefce9e
+14:55:18:332  INFO 61820 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+14:55:19:317  INFO 61820 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cbc3c2
+14:55:19:323  INFO 61820 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+14:55:19:834  INFO 61820 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+14:55:19:843  INFO 61820 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 12.38 seconds (process running for 14.061)
+14:55:33:898  INFO 61820 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:55:33:900  INFO 61820 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+14:55:33:904  INFO 61820 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+14:55:34:596 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:55:34:673 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:55:34:773 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:55:34:781 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:55:34:783 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:55:34:808 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+14:55:39:801 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:55:39:803 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:55:39:807 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:55:39:810 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:55:39:810 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:55:39:835 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+14:55:47:919 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:55:47:921 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:55:47:927 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:55:47:928 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:55:47:928 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:55:47:936 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+14:57:35:052  INFO 61820 --- [warehouse] [http-nio-8000-exec-8] com.zh.controller.UserController         : 用户1退出登录
+14:57:39:365 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+14:57:39:384 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+14:57:39:431 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+14:57:39:622  INFO 61820 --- [warehouse] [http-nio-8000-exec-9] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVo(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYzNDUwNTl9.TgtBNp-CPvFQzF9mKIDhYYXB1I5hV_Fw2Jo6aji5CPSntqqTEw38_KGx1cwrKnOM5T9-J6pekCgP7EFhHl7mxNxWyN57qb1JI5Uhc5_jQBbXpAt5ppPWqGhds01yYnajxsaijNTFs-FCcIJyDcwV9c5WNxbmctFe1alpQbjyAN-HkQs7Dj2WmTE9I1nxXRRT7u41V2wNfoNV-soh3ZKdcct1DgGMnYpSnatBmHYkjdTPQ4HvjtEuZgUcOJyslPrIxPmvRBFPnYOIdG68AFIQXHls0h8LRQpa7Zv431ekqGLwHg0n4gi8gvvqI8WpYErNAwPYAtCwaE6_M2UMHwUkdw, displayName=管理员, role=ADMIN)
+14:57:55:582 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:57:55:587 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:57:55:597 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:57:55:600 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:57:55:602 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:57:55:612 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+14:57:57:323 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+14:57:57:325 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+14:57:57:330 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+14:57:57:331 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+14:57:57:333 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+14:57:57:345 DEBUG 61820 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:03:24:617  INFO 61820 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+15:03:24:833  INFO 61820 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+15:03:24:875  INFO 61820 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:03:24:936  INFO 61820 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:36:09:694  INFO 70512 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 70512 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+15:36:09:700 DEBUG 70512 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+15:36:09:703  INFO 70512 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+15:36:12:070  INFO 70512 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:36:12:073  INFO 70512 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+15:36:12:113  INFO 70512 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+15:36:13:096  INFO 70512 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+15:36:13:128  INFO 70512 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:36:13:130  INFO 70512 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+15:36:13:226  INFO 70512 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3430 ms
+15:36:15:623  INFO 70512 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@37ebc9d8
+15:36:15:935  INFO 70512 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:36:17:621  INFO 70512 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@338a4c61
+15:36:17:638  INFO 70512 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:36:18:545  INFO 70512 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+15:36:18:577  INFO 70512 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 9.811 seconds (process running for 11.299)
+15:36:45:032  INFO 70512 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:36:45:033  INFO 70512 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:36:45:038  INFO 70512 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+15:36:45:851 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+15:36:45:983 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+15:36:46:133 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+15:36:46:384  INFO 70512 --- [warehouse] [http-nio-8000-exec-1] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVO(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODYzNDc0MDZ9.dTmTw1LFwk76ZgITih9N8s6hEItQnNsUF9OAishGfrkCW9z9FphTqwoDrk1wmRoq6Rajubbe_To337b44JiAzp1elEAIgpGYwyzwg08uhss8JRJnOYXF3Ej8Q84ly9b1LSVeh-yWmsssAgNNQPzQ9OLh3D2uVCMMWw-BgFNRK-e65RqkAYAf2gsluVwpitB-AJX9gDYButifqKcFpuCOOW-S6LwyjIv80v5PYW5elWtV5jvdNlJjbEth8PF8jaSx9D0E4r6WdDfgsRl2OoSI6haFpR9ewIIRkAWF9zvqpqxyXueM0fZCENoaLytCyF4uOHT2RFis7i0qLpE9eMApfw, displayName=管理员, role=ADMIN)
+15:36:49:568 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:36:49:572 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:36:49:585 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:36:49:600 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:36:49:607 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:36:49:634 DEBUG 70512 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:36:52:704 ERROR 70512 --- [warehouse] [http-nio-8000-exec-8] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:37:03:059 ERROR 70512 --- [warehouse] [http-nio-8000-exec-2] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:37:05:855 ERROR 70512 --- [warehouse] [http-nio-8000-exec-6] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:37:07:146 ERROR 70512 --- [warehouse] [http-nio-8000-exec-3] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:37:21:006 ERROR 70512 --- [warehouse] [http-nio-8000-exec-9] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:37:22:407 ERROR 70512 --- [warehouse] [http-nio-8000-exec-4] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:38:07:509 ERROR 70512 --- [warehouse] [http-nio-8000-exec-1] c.zh.common.config.WebExceptionAdvice    : java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+
+java.lang.NullPointerException: Cannot invoke "com.zh.service.IInventoryService.searchInventory(String, boolean)" because "this.inventoryService" is null
+	at com.zh.controller.InventoryController.search(InventoryController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:39:18:462  INFO 70512 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+15:39:18:590  INFO 70512 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+15:39:18:607  INFO 70512 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+15:39:18:634  INFO 70512 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+15:39:26:140  INFO 63184 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 63184 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+15:39:26:148 DEBUG 63184 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+15:39:26:149  INFO 63184 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+15:39:27:433  INFO 63184 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:39:27:437  INFO 63184 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+15:39:27:478  INFO 63184 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+15:39:28:948  INFO 63184 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+15:39:29:017  INFO 63184 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:39:29:019  INFO 63184 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+15:39:29:278  INFO 63184 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3029 ms
+15:39:35:066  INFO 63184 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@290b1b2e
+15:39:35:416  INFO 63184 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:39:37:110  INFO 63184 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@839755f
+15:39:37:120  INFO 63184 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:39:37:698  INFO 63184 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+15:39:37:715  INFO 63184 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 12.467 seconds (process running for 13.743)
+15:39:58:437  INFO 63184 --- [warehouse] [http-nio-8000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:39:58:437  INFO 63184 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:39:58:439  INFO 63184 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+15:39:58:787 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:39:58:830 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:39:58:906 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:39:58:933 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:39:58:939 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:39:58:988 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:40:06:087 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE (name LIKE ?)
+15:40:06:090 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: %口罩%(String)
+15:40:06:106 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 2
+15:40:06:111 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+15:40:06:115 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long)
+15:40:06:126 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 2
+15:40:09:926 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:40:09:929 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:40:09:949 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:40:09:957 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:40:09:961 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:40:09:973 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:40:36:458 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:40:36:459 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:40:36:468 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:40:36:480 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:40:36:485 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:40:36:497 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:40:37:600 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:40:37:603 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:40:37:612 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:40:37:618 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:40:37:620 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:40:37:629 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:40:38:896 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:40:38:897 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:40:38:909 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:40:38:913 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:40:38:916 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:40:38:926 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:40:39:146 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:40:39:149 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:40:39:161 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:40:39:172 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:40:39:176 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:40:39:183 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:40:51:890 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:40:51:892 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:40:51:897 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:40:51:904 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:40:51:910 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:40:51:922 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:40:52:573 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:40:52:575 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:40:52:584 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:40:52:590 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:40:52:593 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:40:52:597 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:46:44:134 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:46:44:158 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:46:44:191 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:46:44:199 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:46:44:202 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:46:44:216 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:47:30:850 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:47:30:852 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:47:30:863 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:47:30:879 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:47:30:886 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:47:30:897 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:47:48:214 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:47:48:219 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:47:48:224 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:47:48:225 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:47:48:228 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:47:48:238 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:48:10:520 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE id=?
+15:48:10:523 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : ==> Parameters: 1(Long)
+15:48:10:571 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : <==      Total: 1
+15:48:10:611 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : ==>  Preparing: UPDATE product SET sku=?, name=?, category=?, unit=?, price=?, low_stock_threshold=?, created_at=?, updated_at=? WHERE id=?
+15:48:10:619 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : ==> Parameters: P10001(String), 一次性口罩(String), (String), 盒(String), 12.5(BigDecimal), 20(Integer), 2026-07-31T15:07:09(LocalDateTime), 2026-08-03T15:48:10.573663100(LocalDateTime), 1(Long)
+15:48:10:715 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : <==    Updates: 1
+15:48:11:109 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:48:11:111 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:48:11:116 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:48:11:119 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:48:11:120 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:48:11:131 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:48:20:341 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:48:20:343 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:48:20:350 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:48:20:358 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:48:20:360 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:48:20:368 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:48:23:202 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:48:23:204 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:48:23:208 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:48:23:212 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:48:23:213 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:48:23:221 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:48:28:554 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectById   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE id=?
+15:48:28:556 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectById   : ==> Parameters: 1(Long)
+15:48:28:560 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectById   : <==      Total: 1
+15:48:28:564 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.updateById   : ==>  Preparing: UPDATE product SET sku=?, name=?, category=?, unit=?, price=?, low_stock_threshold=?, created_at=?, updated_at=? WHERE id=?
+15:48:28:565 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.updateById   : ==> Parameters: P10001(String), 一次性口罩(String), 防护用品(String), (String), 12.5(BigDecimal), 20(Integer), 2026-07-31T15:07:09(LocalDateTime), 2026-08-03T15:48:28.561868900(LocalDateTime), 1(Long)
+15:48:28:577 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.updateById   : <==    Updates: 1
+15:48:28:940 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:48:28:943 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:48:28:947 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:48:28:950 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:48:28:952 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:48:28:961 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:48:34:947 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectById   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE id=?
+15:48:34:951 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectById   : ==> Parameters: 1(Long)
+15:48:34:957 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectById   : <==      Total: 1
+15:48:34:961 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.updateById   : ==>  Preparing: UPDATE product SET sku=?, name=?, category=?, unit=?, price=?, low_stock_threshold=?, created_at=?, updated_at=? WHERE id=?
+15:48:34:965 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.updateById   : ==> Parameters: P10001(String), 一次性口罩(String), 防护用品(String), 盒(String), 12.5(BigDecimal), 20(Integer), 2026-07-31T15:07:09(LocalDateTime), 2026-08-03T15:48:34.959090400(LocalDateTime), 1(Long)
+15:48:34:975 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.updateById   : <==    Updates: 1
+15:48:35:219 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:48:35:220 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:48:35:224 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:48:35:227 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:48:35:228 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:48:35:235 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:48:39:792 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectById   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE id=?
+15:48:39:793 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectById   : ==> Parameters: 1(Long)
+15:48:39:799 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectById   : <==      Total: 1
+15:48:39:803 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.updateById   : ==>  Preparing: UPDATE product SET sku=?, name=?, category=?, unit=?, price=?, low_stock_threshold=?, created_at=?, updated_at=? WHERE id=?
+15:48:39:806 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.updateById   : ==> Parameters: P10001(String), 一次性口罩(String), 防护用品(String), 盒(String), 12.5(BigDecimal), 0(Integer), 2026-07-31T15:07:09(LocalDateTime), 2026-08-03T15:48:39.800023500(LocalDateTime), 1(Long)
+15:48:39:817 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.updateById   : <==    Updates: 1
+15:48:40:173 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:48:40:174 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:48:40:177 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:48:40:179 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:48:40:184 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:48:40:199 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:49:03:329 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product WHERE id=?
+15:49:03:330 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : ==> Parameters: 1(Long)
+15:49:03:333 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectById   : <==      Total: 1
+15:49:03:338 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : ==>  Preparing: UPDATE product SET sku=?, name=?, category=?, unit=?, price=?, low_stock_threshold=?, created_at=?, updated_at=? WHERE id=?
+15:49:03:340 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : ==> Parameters: P10001(String), 一次性口罩(String), 防护用品(String), 盒(String), 12.5(BigDecimal), 20(Integer), 2026-07-31T15:07:09(LocalDateTime), 2026-08-03T15:49:03.335095800(LocalDateTime), 1(Long)
+15:49:03:351 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.updateById   : <==    Updates: 1
+15:49:03:714 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:49:03:718 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:49:03:722 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:49:03:726 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:49:03:728 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:49:03:737 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:49:07:220 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:49:07:221 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:49:07:226 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:49:07:231 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:49:07:235 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:49:07:240 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:49:15:054 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:49:15:055 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:49:15:059 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:49:15:062 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:49:15:064 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 100(Long)
+15:49:15:073 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:49:16:988 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:49:16:990 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:49:16:994 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:49:17:000 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:49:17:003 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:49:17:009 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:49:27:713 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:49:27:714 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:49:27:720 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:49:27:724 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:49:27:727 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:49:27:732 DEBUG 63184 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+16:12:37:949  INFO 63184 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+16:12:38:140  INFO 63184 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+16:12:38:171  INFO 63184 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:12:38:188  INFO 63184 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

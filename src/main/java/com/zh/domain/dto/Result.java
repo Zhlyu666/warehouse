@@ -27,7 +27,7 @@ public class Result {
 
     public static Result ok(String message, Object data) {return new Result(0, message, data, now());}
 
-    public static Result fail(Integer code, String message) {return new Result(code, message, null, now());}
+    public static Result fail() {return new Result(-1, "操作失败", null, now());}
 
-    public static Result fail(String message) {return fail(-1, message);}
+    public static Result fail(String message) {return fail();}
 }

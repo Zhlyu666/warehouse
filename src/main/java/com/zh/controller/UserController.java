@@ -34,5 +34,10 @@ public class UserController {
         return iUserService.login(user);
     }
 
-
+    @PostMapping("/logout")
+    public void logout() {
+        //TODO 请求头携带 token，服务端删除 Redis 会话。
+        Long userId = UserHolder.getUser().getId();
+        log.info("用户{}退出登录", userId);
+    }
 }
