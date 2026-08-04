@@ -29,5 +29,6 @@ public class Result {
 
     public static Result fail() {return new Result(-1, "操作失败", null, now());}
 
-    public static Result fail(String message) {return fail();}
+    public static Result fail(String message) {return new Result(-1, message, null, now());}
+
 }
