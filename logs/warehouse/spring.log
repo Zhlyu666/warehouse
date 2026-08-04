@@ -1229,3 +1229,829 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 16:57:49:143  INFO 62456 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
 16:57:49:170  INFO 62456 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 16:57:49:179  INFO 62456 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:57:58:057  INFO 24648 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 24648 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+16:57:58:060 DEBUG 24648 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+16:57:58:061  INFO 24648 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+16:57:58:664  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+16:57:58:665  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+16:57:58:680  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+16:57:58:711  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+16:57:58:711  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:57:58:725  INFO 24648 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+16:57:59:151  INFO 24648 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+16:57:59:162  INFO 24648 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:57:59:162  INFO 24648 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:57:59:203  INFO 24648 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1099 ms
+16:57:59:967  INFO 24648 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+16:58:00:189  INFO 24648 --- [warehouse] [redisson-netty-4-4] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+16:58:00:257  INFO 24648 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+16:58:00:477  INFO 24648 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f19b8b3
+16:58:00:526  INFO 24648 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:58:00:737  INFO 24648 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40f15786
+16:58:00:739  INFO 24648 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:58:00:894  INFO 24648 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+16:58:00:899  INFO 24648 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 3.225 seconds (process running for 3.741)
+16:58:10:873  INFO 24648 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:58:10:874  INFO 24648 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:58:10:877  INFO 24648 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+16:58:17:471 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+16:58:17:567 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+16:58:17:642 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+16:58:17:776  INFO 24648 --- [warehouse] [http-nio-8000-exec-4] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVO(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODY0Mzg2OTd9.bzkrQXMiYN1DbQhAVMmy3HIJDecD2_dxwYC3QWaxYiFwREJ8EDBDsdBP9PaCdB2Tmc0dcC8mRrpcUJRKBanQc09j2T48iYZ2HsgoaaIxrgFqaE-gNrZmeodmgFm5NFYjHi_E_KGby77JTC4Q0t6rqax-RO1bqqgGjAZOGlkC1nZOzx8FaCo5hG4K5t5y4ZaTN7CD3uXkklqwH2PVmUJf4ZiJCgwNAZJHpAO4j_9LLsxvPJxXHlrrsOxF5BtoWbGjd3UM42eF7CSnocyVFFi_nxxkMcWH36uoi5SRqtTKodPNcUHtHONw69Jq-RJJvkBmqAP4GhPqLF0bALcj_cOrXg, displayName=管理员, role=ADMIN)
+16:58:22:011  INFO 24648 --- [warehouse] [http-nio-8000-exec-10] com.zh.controller.UserController         : 用户1退出登录
+16:59:30:027 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+16:59:30:032 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+16:59:30:039 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+16:59:30:099  INFO 24648 --- [warehouse] [http-nio-8000-exec-3] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVO(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODY0Mzg3NzB9.DnmGxIiZRiLEZmZInGRxlGge1It39cvhV8p9e6S6XOl6xtDWHpJFxhszMSv_r7yrUZWGFIfb66joI59R3pQz1XzOyjv_TkloSR2q9dD2uuKOrqsHjqeUvN4tzmaq54Jy45-tRO9NYmJUhV17ri5ej4T_vh-NWvFA4jGeFtV9jFfOz-X-at-XTwxxoF0vvcGfoADokLGXCcelqpUErPMWguy3kjerfq7KanUtWJKJojH3mvx2--TVHtDiULS6cNQLOSesLHuxklQLS-aNJSCn6Y303ymUiad6m4YWkVX2xRF09jtkV0RvWwEkG9Kt46BOPVDYeSofkbhTLW-H93FtOA, displayName=管理员, role=ADMIN)
+16:59:32:054 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+16:59:32:056 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+16:59:32:071 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+16:59:32:084 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+16:59:32:087 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+16:59:32:109 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+16:59:32:685 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+16:59:32:689 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+16:59:32:693 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+16:59:32:695 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+16:59:32:697 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+16:59:32:738 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+16:59:33:281 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+16:59:33:282 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+16:59:33:294 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+16:59:33:313 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:33:317 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+16:59:33:327 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+16:59:33:847 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+16:59:33:849 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+16:59:33:855 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+16:59:33:859 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:33:861 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+16:59:33:875 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+16:59:34:540 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+16:59:34:541 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+16:59:34:544 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+16:59:34:546 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+16:59:34:548 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+16:59:34:554 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+16:59:34:929 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+16:59:34:931 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+16:59:34:934 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+16:59:34:936 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+16:59:34:937 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+16:59:34:944 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+16:59:35:862 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+16:59:35:864 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+16:59:35:870 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+16:59:35:877 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:35:882 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+16:59:35:888 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+16:59:36:147 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+16:59:36:148 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+16:59:36:156 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+16:59:36:163 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:36:166 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+16:59:36:173 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+16:59:38:786 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+16:59:38:787 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+16:59:38:789 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+16:59:38:791 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+16:59:38:792 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+16:59:38:797 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+16:59:39:020 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+16:59:39:021 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+16:59:39:028 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+16:59:39:036 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:39:039 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+16:59:39:044 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+16:59:43:317 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+16:59:43:319 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+16:59:43:329 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+16:59:43:333 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+16:59:43:335 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+16:59:43:342 DEBUG 24648 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+17:20:04:094  INFO 24648 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:20:04:198  INFO 24648 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:20:04:261  INFO 24648 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:20:04:270  INFO 24648 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:20:10:002  INFO 71040 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 71040 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:20:10:003 DEBUG 71040 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:20:10:004  INFO 71040 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:20:10:537  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:20:10:538  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:20:10:553  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+17:20:10:589  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:20:10:589  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:20:10:604  INFO 71040 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:20:11:127  INFO 71040 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:20:11:138  INFO 71040 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:20:11:138  INFO 71040 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:20:11:180  INFO 71040 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1133 ms
+17:20:11:898  WARN 71040 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:20:11:917  INFO 71040 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:20:11:929  INFO 71040 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:20:11:942 ERROR 71040 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:21:25:628  INFO 28180 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 28180 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:21:25:630 DEBUG 28180 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:21:25:631  INFO 28180 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:21:26:318  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:21:26:319  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:21:26:334  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+17:21:26:362  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:21:26:374  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:21:26:384  INFO 28180 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:21:26:784  INFO 28180 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:21:26:792  INFO 28180 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:21:26:793  INFO 28180 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:21:26:829  INFO 28180 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1155 ms
+17:21:27:410  WARN 28180 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:21:27:424  INFO 28180 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:21:27:431  INFO 28180 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:21:27:443 ERROR 28180 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:22:24:587  INFO 31780 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 31780 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:22:24:590 DEBUG 31780 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:22:24:590  INFO 31780 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:22:25:280  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:22:25:282  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:22:25:298  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+17:22:25:327  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:22:25:327  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:22:25:338  INFO 31780 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:22:25:771  INFO 31780 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:22:25:782  INFO 31780 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:22:25:782  INFO 31780 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:22:25:818  INFO 31780 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1183 ms
+17:22:26:453  WARN 31780 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:22:26:464  INFO 31780 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:22:26:471  INFO 31780 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:22:26:481 ERROR 31780 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:24:10:228  INFO 55812 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 55812 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:24:10:232 DEBUG 55812 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:24:10:233  INFO 55812 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:24:10:813  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:24:10:814  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:24:10:831  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+17:24:10:859  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:24:10:860  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:24:10:870  INFO 55812 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:24:11:305  INFO 55812 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:24:11:314  INFO 55812 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:24:11:314  INFO 55812 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:24:11:349  INFO 55812 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1059 ms
+17:24:11:975  WARN 55812 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:24:11:989  INFO 55812 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:24:11:997  INFO 55812 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:24:12:007 ERROR 55812 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:24:28:346  INFO 43084 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 43084 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:24:28:350 DEBUG 43084 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:24:28:351  INFO 43084 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:24:29:016  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:24:29:016  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:24:29:029  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+17:24:29:061  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:24:29:062  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:24:29:071  INFO 43084 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+17:24:29:477  INFO 43084 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:24:29:487  INFO 43084 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:24:29:488  INFO 43084 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:24:29:525  INFO 43084 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1122 ms
+17:24:30:148  WARN 43084 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:24:30:160  INFO 43084 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:24:30:169  INFO 43084 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:24:30:178 ERROR 43084 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:27:10:652  INFO 19792 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 19792 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:27:10:654 DEBUG 19792 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:27:10:655  INFO 19792 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:27:11:200  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:27:11:202  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:27:11:225  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+17:27:11:268  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:27:11:268  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:27:11:282  INFO 19792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:27:11:690  INFO 19792 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:27:11:699  INFO 19792 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:27:11:700  INFO 19792 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:27:11:737  INFO 19792 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1042 ms
+17:27:12:411  WARN 19792 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:27:12:423  INFO 19792 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:27:12:430  INFO 19792 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:27:12:439 ERROR 19792 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:29:37:852  INFO 35792 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 35792 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:29:37:854 DEBUG 35792 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:29:37:855  INFO 35792 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:29:38:860  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:29:38:861  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:29:38:875  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+17:29:38:905  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:29:38:906  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:29:38:915  INFO 35792 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:29:39:364  INFO 35792 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:29:39:374  INFO 35792 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:29:39:375  INFO 35792 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:29:39:412  INFO 35792 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1504 ms
+17:29:40:155  WARN 35792 --- [warehouse] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventoryController': Unsatisfied dependency expressed through field 'inventoryService': Error creating bean with name 'inventoryServiceImpl': Unsatisfied dependency expressed through field 'objectMapper': No qualifying bean of type 'com.fasterxml.jackson.databind.ObjectMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+17:29:40:165  INFO 35792 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+17:29:40:172  INFO 35792 --- [warehouse] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:29:40:180 ERROR 35792 --- [warehouse] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field objectMapper in com.zh.service.impl.InventoryServiceImpl required a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.fasterxml.jackson.databind.ObjectMapper' in your configuration.
+
+17:31:18:916  INFO 64844 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 64844 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:31:18:919 DEBUG 64844 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:31:18:919  INFO 64844 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:31:19:526  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:31:19:527  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:31:19:540  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+17:31:19:570  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:31:19:571  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:31:19:580  INFO 64844 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:31:19:980  INFO 64844 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:31:19:990  INFO 64844 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:31:19:990  INFO 64844 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:31:20:021  INFO 64844 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1064 ms
+17:31:20:779  INFO 64844 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:31:21:048  INFO 64844 --- [warehouse] [redisson-netty-4-4] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:31:21:117  INFO 64844 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:31:21:360  INFO 64844 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@5990e6c5
+17:31:21:415  INFO 64844 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:31:21:686  INFO 64844 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5089a72b
+17:31:21:687  INFO 64844 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:31:21:848  INFO 64844 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:31:21:853  INFO 64844 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 3.307 seconds (process running for 3.831)
+17:31:32:400  INFO 64844 --- [warehouse] [http-nio-8000-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:31:32:401  INFO 64844 --- [warehouse] [http-nio-8000-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:31:32:404  INFO 64844 --- [warehouse] [http-nio-8000-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+17:31:34:294 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:34:393 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:34:537 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:34:585 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+17:31:34:590 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+17:31:34:610 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+17:31:34:631 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:34:633 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:34:637 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:34:650 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:34:653 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:34:674 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:36:496 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:36:497 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:36:500 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:36:501 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:36:503 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:36:511 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:37:543 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:37:545 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:37:552 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:37:672 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:37:675 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:37:678 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:38:376 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:38:380 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:38:382 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:38:383 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:38:385 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:38:397 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:38:619 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:38:620 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:38:631 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:38:672 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:38:675 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:38:678 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:39:252 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:39:254 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:39:260 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:39:260 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:39:263 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:39:272 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:40:305 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:40:306 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:40:314 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:40:357 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:40:361 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:40:366 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:40:590 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+17:31:40:591 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+17:31:40:603 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+17:31:40:612 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+17:31:40:615 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+17:31:40:622 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+17:31:41:155 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:41:158 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:41:159 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:41:160 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:41:162 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:41:169 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:42:353 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:42:355 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:42:359 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:42:390 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:42:392 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:42:395 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:43:164 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:43:164 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:43:171 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:43:192 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:43:193 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:43:195 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:44:487  INFO 64844 --- [warehouse] [http-nio-8000-exec-9] com.zh.controller.UserController         : 用户1退出登录
+17:31:48:239 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+17:31:48:243 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+17:31:48:262 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+17:31:48:427  INFO 64844 --- [warehouse] [http-nio-8000-exec-4] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVO(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODY0NDA3MDh9.GwfnnDz7j8Jgh7I4DgqI6Pv1Wfs0VdBESGBkc9fJLJJCHzjXyhVa_QhiZkC4iNzAVExAArHJVzgt7j5lV_T0erP_fC-hxRXj6ICFUbsxTv4Lov8-z1ulDUQO_yVK_cZ4tj1h6ifvWvxnYq71qL9QHvH2HbVNcnduWpaK5IKUB4oxCFSgJ3pobXpmqo22Jvq61y9_kDrbxQXnpFKyVTDTULECYvZEuZljJwziu-4e-SB_UlZFWuxTkiaslICcQZYw4WmuQfeOAs1jheUE_Ov5XFQOvFxJEizwsOg_hAvoOOdnxnHLtPRHZLrm0cMZNHw6wg1aBYNNl9lpx7_1-Rdp0g, displayName=管理员, role=ADMIN)
+17:31:49:844 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+17:31:49:845 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+17:31:49:848 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+17:31:49:849 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+17:31:49:850 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+17:31:49:856 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+17:31:50:830 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:31:50:831 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:31:50:836 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:31:50:869 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:31:50:871 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:31:50:874 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:31:51:487 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+17:31:51:488 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+17:31:51:497 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+17:31:51:499 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+17:31:51:500 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+17:31:51:507 DEBUG 64844 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+17:37:37:197  INFO 64844 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:37:37:333  INFO 64844 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:37:37:378  INFO 64844 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:37:37:391  INFO 64844 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:37:42:957  INFO 55988 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 55988 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:37:42:959 DEBUG 55988 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:37:42:960  INFO 55988 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:37:43:513  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:37:43:514  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:37:43:529  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+17:37:43:558  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:37:43:559  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:37:43:568  INFO 55988 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:37:43:956  INFO 55988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:37:43:963  INFO 55988 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:37:43:964  INFO 55988 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:37:44:000  INFO 55988 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1004 ms
+17:37:44:742  INFO 55988 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:37:44:995  INFO 55988 --- [warehouse] [redisson-netty-4-5] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:37:45:074  INFO 55988 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:37:45:401  INFO 55988 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@56e07a08
+17:37:45:448  INFO 55988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:37:45:634  INFO 55988 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c9aeec6
+17:37:45:635  INFO 55988 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:37:45:772  INFO 55988 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:37:45:776  INFO 55988 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 3.15 seconds (process running for 3.602)
+17:37:49:505  INFO 55988 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:37:49:506  INFO 55988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:37:49:511  INFO 55988 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+17:37:51:289 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:37:51:398 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:37:51:535 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:37:51:600 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+17:37:51:607 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+17:37:51:622 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+17:38:00:522 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:38:00:524 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 2(Long)
+17:38:00:534 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:38:00:557 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:38:00:563 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : ==> Parameters: 1(Integer), 2026-08-04T17:38:00.542847800(LocalDateTime), 2(Long), -1(Integer)
+17:38:00:593 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:38:00:599 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:38:00:602 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 2(Long)
+17:38:00:605 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:38:00:991 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:38:00:993 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:38:01:011 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:38:01:130 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+17:38:01:132 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 2(Long), 11(Long)
+17:38:01:138 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 1
+17:38:03:036 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:38:03:038 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 2(Long)
+17:38:03:041 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:38:03:046 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:38:03:047 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : ==> Parameters: 1(Integer), 2026-08-04T17:38:03.042192500(LocalDateTime), 2(Long), -1(Integer)
+17:38:03:051 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:38:03:052 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:38:03:053 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 2(Long)
+17:38:03:057 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:38:03:413 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:38:03:415 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:38:03:426 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:38:03:466 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+17:38:03:467 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 2(Long), 11(Long)
+17:38:03:476 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 1
+17:41:07:646 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:41:07:647 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:41:07:653 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:41:07:670 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+17:41:07:673 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+17:41:07:681 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+17:41:16:829 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:41:16:830 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:41:16:836 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:41:16:858 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?))
+17:41:16:861 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 11(Long)
+17:41:16:866 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 0
+17:41:25:191 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:25:194 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:25:198 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:25:203 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:25:205 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==> Parameters: 1(Integer), 2026-08-04T17:41:25.199678200(LocalDateTime), 1(Long), -1(Integer)
+17:41:25:209 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:25:211 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:25:218 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:25:223 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:25:280 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:41:25:282 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:41:25:289 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:41:25:321 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+17:41:25:323 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 11(Long)
+17:41:25:327 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 1
+17:41:28:239 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:28:242 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:28:245 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:28:248 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:28:250 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : ==> Parameters: 1(Integer), 2026-08-04T17:41:28.246636800(LocalDateTime), 1(Long), -1(Integer)
+17:41:28:254 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:28:256 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:28:259 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:28:261 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:28:478 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:41:28:479 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:41:28:486 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:41:28:507 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+17:41:28:509 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 11(Long)
+17:41:28:513 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 1
+17:41:35:472 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:35:474 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:35:477 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:35:481 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:35:482 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:35.478056400(LocalDateTime), 1(Long), 1(Integer)
+17:41:35:486 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:35:487 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:35:488 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:35:491 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:42:046 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+17:41:42:047 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+17:41:42:052 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+17:41:42:073 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?))
+17:41:42:074 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 11(Long)
+17:41:42:076 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 1
+17:41:44:741 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:44:743 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:44:752 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:44:760 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:44:763 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:44.753309400(LocalDateTime), 1(Long), 1(Integer)
+17:41:44:768 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:44:769 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:44:771 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:44:775 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:45:551 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:45:553 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:45:555 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:45:561 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:45:563 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:45.556616500(LocalDateTime), 1(Long), 1(Integer)
+17:41:45:567 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:45:568 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:45:568 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:45:572 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:45:801 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:45:803 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:45:806 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:45:821 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:45:824 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:45.808084200(LocalDateTime), 1(Long), 1(Integer)
+17:41:45:828 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:45:829 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:45:831 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:45:834 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:46:265 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:46:267 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:46:271 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:46:275 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:46:277 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:46.272676600(LocalDateTime), 1(Long), 1(Integer)
+17:41:46:284 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:46:285 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:46:287 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:46:293 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:46:837 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:46:838 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:46:842 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:46:846 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:46:848 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:46.843154500(LocalDateTime), 1(Long), 1(Integer)
+17:41:46:850 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:46:853 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:46:854 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:46:857 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-9] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:41:47:475 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:41:47:477 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:41:47:481 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:41:47:485 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:41:47:486 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:41:47.482184(LocalDateTime), 1(Long), 1(Integer)
+17:41:47:490 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:41:47:492 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:41:47:493 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:41:47:496 DEBUG 55988 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:42:41:157  INFO 55988 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:42:41:275  INFO 55988 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:42:41:335  INFO 55988 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:42:41:344  INFO 55988 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:42:47:086  INFO 6316 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 6316 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:42:47:089 DEBUG 6316 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:42:47:089  INFO 6316 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:42:47:565  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:42:47:566  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:42:47:579  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+17:42:47:611  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:42:47:611  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:42:47:623  INFO 6316 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:42:48:106  INFO 6316 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:42:48:117  INFO 6316 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:42:48:117  INFO 6316 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:42:48:155  INFO 6316 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1031 ms
+17:42:48:901  INFO 6316 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:42:49:133  INFO 6316 --- [warehouse] [redisson-netty-4-4] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:42:49:197  INFO 6316 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:42:49:486  INFO 6316 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@5990e6c5
+17:42:49:524  INFO 6316 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:42:49:755  INFO 6316 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14980819
+17:42:49:756  INFO 6316 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:42:49:899  INFO 6316 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:42:49:903  INFO 6316 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 3.154 seconds (process running for 3.66)
+17:42:52:849  INFO 6316 --- [warehouse] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:42:52:850  INFO 6316 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:42:52:853  INFO 6316 --- [warehouse] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+17:44:31:099  INFO 6316 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:44:34:511 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:44:34:535 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:44:34:565 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:44:34:573 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:44:34:574 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:44:34.567151600(LocalDateTime), 1(Long), 1(Integer)
+17:44:34:578 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:44:34:579 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:44:34:580 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:44:34:581 DEBUG 6316 --- [warehouse] [http-nio-8000-exec-2] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:44:34:685  INFO 6316 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:44:34:733  INFO 6316 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:44:34:739  INFO 6316 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:44:51:241  INFO 37164 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 37164 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:44:51:243 DEBUG 37164 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:44:51:244  INFO 37164 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:44:51:858  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:44:51:859  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:44:51:878  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+17:44:51:912  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:44:51:914  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:44:51:927  INFO 37164 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+17:44:52:421  INFO 37164 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:44:52:434  INFO 37164 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:44:52:435  INFO 37164 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:44:52:487  INFO 37164 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1198 ms
+17:44:53:366  INFO 37164 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:44:54:668  INFO 37164 --- [warehouse] [redisson-netty-4-4] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:44:54:983  INFO 37164 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:44:56:643  INFO 37164 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@56e07a08
+17:44:56:889  INFO 37164 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:44:57:811  INFO 37164 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5089a72b
+17:44:57:815  INFO 37164 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:44:58:543  INFO 37164 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:44:58:567  INFO 37164 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 7.732 seconds (process running for 8.299)
+17:45:14:239  INFO 37164 --- [warehouse] [http-nio-8000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:45:14:241  INFO 37164 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:45:14:248  INFO 37164 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+17:45:36:270 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:45:36:376 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:45:36:488 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:45:36:522 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:45:36:529 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:45:36.496439(LocalDateTime), 1(Long), 1(Integer)
+17:45:36:543 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:45:36:557 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:45:36:561 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:45:36:567 DEBUG 37164 --- [warehouse] [http-nio-8000-exec-3] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:49:18:773  INFO 37164 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:49:18:907  INFO 37164 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:49:18:943  INFO 37164 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:49:18:950  INFO 37164 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:49:24:774  INFO 25752 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 25752 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:49:24:777 DEBUG 25752 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:49:24:777  INFO 25752 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:49:25:258  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:49:25:259  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:49:25:273  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+17:49:25:300  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:49:25:301  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:49:25:310  INFO 25752 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+17:49:25:807  INFO 25752 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:49:25:829  INFO 25752 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:49:25:830  INFO 25752 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:49:25:889  INFO 25752 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1077 ms
+17:49:26:634  INFO 25752 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:49:26:848  INFO 25752 --- [warehouse] [redisson-netty-4-4] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:49:27:162  INFO 25752 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:49:29:013  INFO 25752 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@56e07a08
+17:49:29:253  INFO 25752 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:49:30:371  INFO 25752 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5089a72b
+17:49:30:376  INFO 25752 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:49:31:545  INFO 25752 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:49:31:572  INFO 25752 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 7.14 seconds (process running for 7.713)
+17:50:27:367  INFO 25752 --- [warehouse] [http-nio-8000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:50:27:367  INFO 25752 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:50:27:372  INFO 25752 --- [warehouse] [http-nio-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+17:50:31:453 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:50:31:548 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:50:31:639 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:50:31:675 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:50:31:682 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:50:31.648153(LocalDateTime), 1(Long), 1(Integer)
+17:50:31:701 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:50:31:712 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:50:31:716 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:50:31:723 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:50:33:787 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:50:33:795 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:50:33:801 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:50:33:806 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:50:33:807 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:50:33.803270400(LocalDateTime), 1(Long), 1(Integer)
+17:50:33:814 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:50:33:816 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:50:33:817 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:50:33:823 DEBUG 25752 --- [warehouse] [http-nio-8000-exec-4] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:52:16:976  INFO 25752 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:52:17:043  INFO 25752 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:52:17:075  INFO 25752 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:52:17:080  INFO 25752 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:52:22:597  INFO 13536 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 13536 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+17:52:22:598 DEBUG 13536 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+17:52:22:599  INFO 13536 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+17:52:23:094  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:52:23:096  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+17:52:23:112  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+17:52:23:142  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+17:52:23:143  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+17:52:23:157  INFO 13536 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+17:52:23:593  INFO 13536 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+17:52:23:602  INFO 13536 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:52:23:603  INFO 13536 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+17:52:23:639  INFO 13536 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1006 ms
+17:52:24:324  INFO 13536 --- [warehouse] [main] org.redisson.Version                     : Redisson 3.52.0
+17:52:24:543  INFO 13536 --- [warehouse] [redisson-netty-4-5] o.redisson.connection.ConnectionsHolder  : 1 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:52:24:634  INFO 13536 --- [warehouse] [redisson-netty-4-19] o.redisson.connection.ConnectionsHolder  : 24 connections initialized for 192.168.100.128/192.168.100.128:6379
+17:52:25:019  INFO 13536 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a9cc6cb
+17:52:25:079  INFO 13536 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:52:25:312  INFO 13536 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52a2e2fb
+17:52:25:314  INFO 13536 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:52:25:500  INFO 13536 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+17:52:25:507  INFO 13536 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 3.258 seconds (process running for 3.697)
+17:52:52:337  INFO 13536 --- [warehouse] [http-nio-8000-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:52:52:338  INFO 13536 --- [warehouse] [http-nio-8000-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:52:52:344  INFO 13536 --- [warehouse] [http-nio-8000-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+17:52:56:466 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:52:56:547 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:52:56:628 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:52:56:661 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:52:56:668 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:52:56.636903900(LocalDateTime), 1(Long), 1(Integer)
+17:52:56:682 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:52:56:689 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:52:56:696 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:52:56:702 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-8] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:52:58:746 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id = ?)
+17:52:58:748 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : ==> Parameters: 1(Long)
+17:52:58:754 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.z.m.InventoryMapper.selectWithCursor   : <==      Total: 1
+17:52:58:760 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : ==>  Preparing: UPDATE inventory SET quantity = quantity + ?,updated_at=? WHERE (id = ? AND quantity >= ?)
+17:52:58:763 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : ==> Parameters: -1(Integer), 2026-08-04T17:52:58.756552700(LocalDateTime), 1(Long), 1(Integer)
+17:52:58:769 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.InventoryMapper.update     : <==    Updates: 1
+17:52:58:770 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE id=?
+17:52:58:772 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : ==> Parameters: 1(Long)
+17:52:58:777 DEBUG 13536 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectById   : <==      Total: 1
+17:53:26:885  INFO 13536 --- [warehouse] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+17:53:26:950  INFO 13536 --- [warehouse] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+17:53:26:982  INFO 13536 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:53:26:988  INFO 13536 --- [warehouse] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
