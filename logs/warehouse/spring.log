@@ -362,3 +362,98 @@
 00:53:48:039 DEBUG 9016 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
 00:53:48:050 DEBUG 9016 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
 00:53:48:070 DEBUG 9016 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+15:10:04:333  INFO 50240 --- [warehouse] [main] com.zh.WarehouseApplication              : Starting WarehouseApplication using Java 17.0.16 with PID 50240 (E:\ideaProject\warehouse\target\classes started by 张乐宇 in E:\ideaProject\warehouse)
+15:10:04:335 DEBUG 50240 --- [warehouse] [main] com.zh.WarehouseApplication              : Running with Spring Boot v4.1.0, Spring v7.0.8
+15:10:04:336  INFO 50240 --- [warehouse] [main] com.zh.WarehouseApplication              : The following 1 profile is active: "local"
+15:10:07:502  INFO 50240 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:10:07:508  INFO 50240 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+15:10:07:590  INFO 50240 --- [warehouse] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 JDBC repository interfaces.
+15:10:09:343  INFO 50240 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+15:10:09:387  INFO 50240 --- [warehouse] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:10:09:389  INFO 50240 --- [warehouse] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+15:10:09:571  INFO 50240 --- [warehouse] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5189 ms
+15:10:13:325  INFO 50240 --- [warehouse] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@389adf1d
+15:10:13:522  INFO 50240 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:10:14:229  INFO 50240 --- [warehouse] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c997de8
+15:10:14:233  INFO 50240 --- [warehouse] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:10:14:426  INFO 50240 --- [warehouse] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+15:10:14:433  INFO 50240 --- [warehouse] [main] com.zh.WarehouseApplication              : Started WarehouseApplication in 10.541 seconds (process running for 11.38)
+15:13:21:980  INFO 50240 --- [warehouse] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:13:21:981  INFO 50240 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:13:21:987  INFO 50240 --- [warehouse] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+15:13:22:650 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : ==>  Preparing: SELECT id,username,password,display_name,role,created_at FROM user WHERE (username = ?)
+15:13:22:742 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : ==> Parameters: admin(String)
+15:13:22:851 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.UserMapper.selectWithCursor  : <==      Total: 1
+15:13:23:079  INFO 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.service.impl.UserServiceImpl      : 用户登录成功：UserLoginVO(token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoxLCJleHAiOjE3ODY0MzI0MDJ9.nTEFjxrhiHbwENLo5HJuFSBVyWIeAPLgps-x6157PngRyQYbxRXKcf-RBp_p6tacCL4_0o6URv5nROERPAheEq-cu5fDtxw_wBB12lhcqSJKzot-SG4X6qdLIBd0qJ9UtAZEgRVH2MQ7ULcDCvJ7bd5CGF0KLkBf-Tj0H7WvU0-sc05lFmg8jfccZ2gIYsqCmZUaV0lgjrqfqJY5QwpgbP7P5Qbxf42SZ74q5a0x_gewAbedzJPskpfJwHZW6c1ldcyjFKEiJ0mx6fReysAnW2LB2I-YI8Dp-WHGBzRUgaGsy685D_O4z0Pd2eEyQVIA2EVz48J5aZZQgv4lgXQOfQ, displayName=管理员, role=ADMIN)
+15:13:27:683 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:13:27:684 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:13:27:693 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:13:27:706 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:13:27:710 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:13:27:732 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:13:28:714 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:13:28:721 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:13:28:743 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:13:28:759 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:13:28:762 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:13:28:777 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:13:29:463 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+15:13:29:464 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+15:13:29:474 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+15:13:29:480 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:13:29:483 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+15:13:29:492 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+15:27:10:404 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:27:10:405 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:27:10:412 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:27:10:419 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:27:10:422 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:27:10:434 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-10] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:27:11:160 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:27:11:162 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:27:11:164 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:27:11:165 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:27:11:166 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:27:11:171 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:27:12:357 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:27:12:359 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:27:12:368 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:27:12:369 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:27:12:370 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:27:12:378 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-9] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:27:12:499 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:27:12:499 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:27:12:506 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:27:12:509 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:27:12:511 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:27:12:517 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-6] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:27:13:241 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+15:27:13:243 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+15:27:13:253 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+15:27:13:256 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:27:13:258 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+15:27:13:263 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-5] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
+15:27:13:502 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product
+15:27:13:503 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 
+15:27:13:510 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] com.zh.mapper.ProductMapper.selectList   : <==      Total: 11
+15:27:13:518 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==>  Preparing: SELECT id,product_id,quantity,reserved_quantity,version,updated_at FROM inventory WHERE (product_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:27:13:520 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : ==> Parameters: 1(Long), 2(Long), 3(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:27:13:526 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-7] c.zh.mapper.InventoryMapper.selectList   : <==      Total: 10
+15:27:14:031 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:27:14:032 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:27:14:035 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:27:14:056 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:27:14:058 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:27:14:062 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-3] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:27:15:103 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==>  Preparing: SELECT COUNT(*) AS total FROM product
+15:27:15:104 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : ==> Parameters: 
+15:27:15:106 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] c.z.m.ProductMapper.selectList_mpCount   : <==      Total: 1
+15:27:15:107 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==>  Preparing: SELECT id,sku,name,category,unit,price,low_stock_threshold,created_at,updated_at FROM product ORDER BY id ASC LIMIT ?
+15:27:15:107 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : ==> Parameters: 10(Long)
+15:27:15:113 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-2] com.zh.mapper.ProductMapper.selectList   : <==      Total: 10
+15:40:26:221 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : ==>  Preparing: SELECT id,order_no,type,status,total_quantity,operator_id,operator_name,remark,created_at,confirmed_at FROM orders ORDER BY created_at DESC
+15:40:26:223 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : ==> Parameters: 
+15:40:26:272 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] com.zh.mapper.OrdersMapper.selectList    : <==      Total: 11
+15:40:26:278 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==>  Preparing: SELECT id,order_id,product_id,product_name,quantity FROM order_item WHERE (order_id IN (?,?,?,?,?,?,?,?,?,?,?))
+15:40:26:280 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : ==> Parameters: 11(Long), 10(Long), 9(Long), 8(Long), 7(Long), 6(Long), 5(Long), 4(Long), 2(Long), 3(Long), 1(Long)
+15:40:26:287 DEBUG 50240 --- [warehouse] [http-nio-8000-exec-1] c.zh.mapper.OrderItemMapper.selectList   : <==      Total: 14
