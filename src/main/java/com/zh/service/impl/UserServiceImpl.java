@@ -10,11 +10,15 @@ import com.zh.domain.vo.UserLoginVO;
 import com.zh.mapper.UserMapper;
 import com.zh.service.IUserService;
 import com.zh.utils.JwtTool;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
+
+import static com.zh.utils.RedisConstants.SESSION_KEY_PREFIX;
 
 /**
  * <p>
@@ -26,14 +30,13 @@ import java.time.Duration;
  */
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
-    @Autowired
+
     private final JwtTool jwtTool;
 
-    public UserServiceImpl(JwtTool jwtTool) {
-        this.jwtTool = jwtTool;
-    }
-
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     public Result login(UserDTO user) {
@@ -52,6 +55,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
         // 5.登录成功：下发JWT
         String token = jwtTool.createToken(dbUser.getId(), Duration.ofDays(7));
+        // 6.写入Redis会话（Key=warehouse:session:{token}，存userId，TTL 12小时）
+        stringRedisTemplate.opsForValue().set(
+                SESSION_KEY_PREFIX + token,
+                String.valueOf(dbUser.getId()),
+                Duration.ofHours(12)
+        );
         //封装VO
         UserLoginVO vo = new UserLoginVO();
         vo.setToken(token);
