@@ -10,9 +10,14 @@ import com.zh.domain.po.OrderItem;
 import com.zh.domain.po.Orders;
 import com.zh.domain.po.Product;
 import com.zh.mapper.ProductMapper;
+import com.zh.service.IInventoryService;
+import com.zh.service.IOrderItemService;
+import com.zh.service.IOrdersService;
 import com.zh.service.IProductService;
 
+
 import cn.hutool.core.util.StrUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -30,6 +35,15 @@ import java.util.List;
  */
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IProductService {
+
+    @Autowired
+    private IInventoryService inventoryService;
+
+    @Autowired
+    private IOrderItemService orderItemService;
+
+    @Autowired
+    private IOrdersService ordersService;
 
     @Override
     public Result searchProducts(String name, Integer page, Integer size) {
@@ -93,30 +107,30 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
             return Result.fail("商品不存在");
         }
 //        TODO 添加限制
-//        // 2.限制一：库存大于0不允许删除
-//        Inventory inv = inventoryService.lambdaQuery()
-//                .eq(Inventory::getProductId, id)
-//                .one();
-//        if (inv != null && inv.getQuantity() > 0) {
-//            return Result.fail("商品库存大于0，不允许删除");
-//        }
-//        // 3.限制二：存在待处理入库/出库单不允许删除
-//        List<OrderItem> items = orderItemService.lambdaQuery()
-//                .eq(OrderItem::getProductId, id)
-//                .list();
-//        if (!items.isEmpty()) {
-//            List<Long> orderIds = items.stream()
-//                    .map(OrderItem::getOrderId)
-//                    .distinct()
-//                    .toList();
-//            long pendingCount = ordersService.lambdaQuery()
-//                    .in(Orders::getId, orderIds)
-//                    .ne(Orders::getStatus, "CANCELLED")
-//                    .count();
-//            if (pendingCount > 0) {
-//                return Result.fail("存在待处理的入库/出库单，不允许删除");
-//            }
-//        }
+        // 2.限制一：库存大于0不允许删除
+        Inventory inv = inventoryService.lambdaQuery()
+                .eq(Inventory::getProductId, id)
+                .one();
+        if (inv != null && inv.getQuantity() > 0) {
+            return Result.fail("商品库存大于0，不允许删除");
+        }
+        // 3.限制二：存在待处理入库/出库单不允许删除
+        List<OrderItem> items = orderItemService.lambdaQuery()
+                .eq(OrderItem::getProductId, id)
+                .list();
+        if (!items.isEmpty()) {
+            List<Long> orderIds = items.stream()
+                    .map(OrderItem::getOrderId)
+                    .distinct()
+                    .toList();
+            long pendingCount = ordersService.lambdaQuery()
+                    .in(Orders::getId, orderIds)
+                    .ne(Orders::getStatus, "CANCELLED")
+                    .count();
+            if (pendingCount > 0) {
+                return Result.fail("存在待处理的入库/出库单，不允许删除");
+            }
+        }
         // 4.通过全部校验，删除
         return this.removeById(id) ? Result.ok() : Result.fail("删除商品失败");
     }

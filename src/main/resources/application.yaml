@@ -22,6 +22,27 @@ spring:
           max-idle: 10
           min-idle: 1
           time-between-eviction-runs: 10s
+  rabbitmq:
+    host: 192.168.100.128
+    port: 5672
+    username: warehouse
+    password: 123321
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 1000ms
+          max-retries: 3
+        default-requeue-rejected: false
+    connection-timeout: 1s # 设置MQ的连接超时时间
+    template:
+      retry:
+        enabled: true # 开启超时重试机制
+        initial-interval: 1000ms # 失败后的初始等待时间
+        multiplier: 1 # 失败后下次的等待时长倍数，下次等待时长 = initial-interval * multiplier
+        max-retries: 3
+      publisher-confirm-type: correlated # 开启publisher confirm机制，并设置confirm类型
+      publisher-returns: true # 开启publisher return机制
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler

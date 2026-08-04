@@ -14,6 +14,7 @@ import com.zh.domain.po.Product;
 import com.zh.domain.vo.InventoryVO;
 import com.zh.mapper.InventoryMapper;
 import com.zh.mapper.ProductMapper;
+import com.zh.service.IInventoryLogService;
 import com.zh.service.IInventoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -63,6 +64,9 @@ public class InventoryServiceImpl extends ServiceImpl<InventoryMapper, Inventory
 
     @Autowired
     private RedissonClient redissonClient;
+
+    @Autowired
+    private IInventoryLogService inventoryLogService;
 
     @Override
     public Result searchInventory(String keyword, boolean lowStockOnly) {
@@ -229,6 +233,6 @@ public class InventoryServiceImpl extends ServiceImpl<InventoryMapper, Inventory
         log.setAfterQuantity(after);
         log.setRemark(dto.getRemark());
         log.setCreatedAt(LocalDateTime.now());
-//        inventoryLogService.save(log);
+        inventoryLogService.save(log);
     }
 }

@@ -2,11 +2,10 @@ package com.zh.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.zh.common.config.RabbitConfig;
 import com.zh.common.exception.InsufficientStockException;
-import com.zh.domain.dto.OrderCreateDTO;
-import com.zh.domain.dto.OrderItemDTO;
-import com.zh.domain.dto.Result;
-import com.zh.domain.dto.UserDTO;
+import com.zh.domain.dto.*;
 import com.zh.domain.po.Inventory;
 import com.zh.domain.po.OrderItem;
 import com.zh.domain.po.Orders;
@@ -20,9 +19,14 @@ import com.zh.service.IOrderItemService;
 import com.zh.service.IOrdersService;
 
 import com.zh.utils.UserHolder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronization;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDate;
@@ -50,6 +54,7 @@ import static com.zh.utils.OrderStatus.RESERVED;
  * @since 2026-07-31
  */
 @Service
+@Slf4j
 public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> implements IOrdersService {
     @Autowired
     private ProductMapper productMapper;
@@ -59,6 +64,12 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
 
     @Autowired
     private IInventoryService inventoryService;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     /**
      * 创建入库单：校验明细与商品后建单（状态CREATED），不操作库存
@@ -108,7 +119,8 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
         // 2.状态流转：CREATED -> CONFIRMING，接口立即返回
         order.setStatus(CONFIRMING);
         this.updateById(order);
-        // TODO: 更新库存与写库存流水由RabbitMQ消费者异步完成（mq功能暂未实现）
+        // 3.事务提交后发送MQ消息，库存更新由消费者异步完成
+        sendConfirmMessage(order, RabbitConfig.INBOUND_KEY);
         return Result.ok();
     }
 
@@ -126,7 +138,8 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
         // 2.状态流转：RESERVED -> CONFIRMING，接口立即返回
         order.setStatus(CONFIRMING);
         this.updateById(order);
-        // TODO: 扣减库存与写库存流水由RabbitMQ消费者异步完成（mq功能暂未实现）
+        // 3.事务提交后发送MQ消息，库存扣减由消费者异步完成
+        sendConfirmMessage(order, RabbitConfig.OUTBOUND_KEY);
         return Result.ok();
     }
 
@@ -301,5 +314,28 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
             return iv;
         }).toList());
         return vo;
+    }
+
+    /**
+     * 事务提交成功后发送确认消息：保证"状态已改"与"消息已发"强一致
+     */
+    private void sendConfirmMessage(Orders order, String routingKey) {
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
+            @Override
+            public void afterCommit() {
+                OrderConfirmMessage msg = new OrderConfirmMessage();
+                msg.setOrderId(order.getId());
+                msg.setType(order.getType());
+                msg.setConfirmTime(LocalDateTime.now());
+                try {
+                    rabbitTemplate.convertAndSend(
+                            RabbitConfig.ORDER_EXCHANGE,
+                            routingKey,
+                            objectMapper.writeValueAsString(msg));
+                } catch (JsonProcessingException e) {
+                    log.error("订单确认消息序列化失败, orderId={}", order.getId(), e);
+                }
+            }
+        });
     }
 }
