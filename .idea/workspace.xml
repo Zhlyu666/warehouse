@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="892a7314-08de-49f8-8a93-916ff705e192" name="更改" comment="后端java代码" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="ms-17" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3HGA55ptErCBi74yIm9gX7r3CIU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.warehouse [clean].executor": "Run",
+    "Maven.warehouse [compile].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WarehouseApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/ideaProject/warehouse/src/main/java/com/zh/common/config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.WarehouseApplication.executor": "Run"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaProject\warehouse\src\main\java\com\zh\common\config" />
+      <recent name="E:\ideaProject\warehouse\src\main\java\com\zh\common" />
+      <recent name="E:\ideaProject\warehouse\src\main\java\com\zh" />
+      <recent name="E:\ideaProject\warehouse\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.zh.utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zh.common.config" />
+      <recent name="com.zh.utils" />
+      <recent name="com.zh.config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="WarehouseApplication" value="FAILED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WarehouseApplication">
+    <configuration name="WarehouseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="ms-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.zh.WarehouseApplication" />
+      <module name="warehouse.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarehouseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
+      <option name="ALTERNATIVE_JRE_PATH" value="ms-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="warehouse.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zh.WarehouseApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.WarehouseApplication" />
+      <item itemvalue="应用程序.WarehouseApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WarehouseApplication" />
+        <item itemvalue="应用程序.WarehouseApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="逻辑" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="892a7314-08de-49f8-8a93-916ff705e192" name="更改" comment="" />
+      <created>1785483850451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785483850451</updated>
+      <workItem from="1785483852279" duration="39229000" />
+      <workItem from="1785826656907" duration="25286000" />
+      <workItem from="1786960910996" duration="2102000" />
+      <workItem from="1786963472263" duration="1595000" />
+      <workItem from="1787036663404" duration="871000" />
+      <workItem from="1788362577057" duration="2382000" />
+      <workItem from="1788859658991" duration="22718000" />
+      <workItem from="1790152707755" duration="21615000" />
+      <workItem from="1790697433784" duration="125000" />
+      <workItem from="1790697674555" duration="1698000" />
+    </task>
+    <task id="LOCAL-00001" summary="仓储管理项目骨架">
+      <option name="closed" value="true" />
+      <created>1785490407487</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785490407487</updated>
+    </task>
+    <task id="LOCAL-00002" summary="仓储管理项目骨架">
+      <option name="closed" value="true" />
+      <created>1785490439751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785490439751</updated>
+    </task>
+    <task id="LOCAL-00003" summary="用户登录接口开发">
+      <option name="closed" value="true" />
+      <created>1785583275208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785583275208</updated>
+    </task>
+    <task id="LOCAL-00004" summary="用户登录接口开发">
+      <option name="closed" value="true" />
+      <created>1785583346030</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785583346030</updated>
+    </task>
+    <task id="LOCAL-00005" summary="库存、商品接口开发">
+      <option name="closed" value="true" />
+      <created>1785752677252</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785752677252</updated>
+    </task>
+    <task id="LOCAL-00006" summary="出入库，单据接口开发">
+      <option name="closed" value="true" />
+      <created>1785829260580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785829260580</updated>
+    </task>
+    <task id="LOCAL-00007" summary="出入库，单据接口开发">
+      <option name="closed" value="true" />
+      <created>1785829278098</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785829278098</updated>
+    </task>
+    <task id="LOCAL-00008" summary="出入库，单据接口开发">
+      <option name="closed" value="true" />
+      <created>1785829320981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785829320981</updated>
+    </task>
+    <task id="LOCAL-00009" summary="登录接口redis实现">
+      <option name="closed" value="true" />
+      <created>1785833937493</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785833937493</updated>
+    </task>
+    <task id="LOCAL-00010" summary="库存调整分布式锁">
+      <option name="closed" value="true" />
+      <created>1785837250912</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785837250912</updated>
+    </task>
+    <task id="LOCAL-00011" summary="库存调整分布式锁">
+      <option name="closed" value="true" />
+      <created>1785837260401</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785837260401</updated>
+    </task>
+    <task id="LOCAL-00012" summary="mq实现库存操作，实现看板汇总">
+      <option name="closed" value="true" />
+      <created>1785858761108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1785858761109</updated>
+    </task>
+    <task id="LOCAL-00013" summary="后端java代码">
+      <option name="closed" value="true" />
+      <created>1790698171749</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1790698171750</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:io.reactivex.rxjava2:rxjava" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="仓储管理项目骨架" />
+    <MESSAGE value="用户登录接口开发" />
+    <MESSAGE value="库存、商品接口开发" />
+    <MESSAGE value="出入库，单据接口开发" />
+    <MESSAGE value="登录接口redis实现" />
+    <MESSAGE value="库存调整分布式锁" />
+    <MESSAGE value="mq实现库存操作，实现看板汇总" />
+    <MESSAGE value="后端java代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端java代码" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
