@@ -10,7 +10,7 @@ from tools import ALL_TOOLS
 
 model = ChatOpenAI(
     model=os.getenv("MODEL_NAME", "deepseek-chat"),
-    api_key=os.getenv("MODEL_API_KEY", "sk-7bc4969041024b0bb5b86f8ce0d6ef89"),
+    api_key=os.getenv("MODEL_API_KEY", "********"),
     base_url=os.getenv("MODEL_BASE_URL", "https://api.deepseek.com"),
     temperature=0,  # 工具调用场景要确定性，不要发挥
 )
