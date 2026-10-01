@@ -49,7 +49,7 @@ class WarehouseClient:
         return f"操作失败：{body.get('message')}"
 
 
-# AI专用账号（需先在数据库user表创建，见文末SQL）
+# AI专用账号
 client = WarehouseClient(
     username=os.getenv("AI_ACCOUNT", "ai_agent"),
     password=os.getenv("AI_PASSWORD", "ai_agent_123456"),
